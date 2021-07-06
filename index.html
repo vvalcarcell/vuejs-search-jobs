@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
@@ -18,23 +21,35 @@
 
     <div id="root">
         <div class="list-item" :class="isApplied(index)" v-for="(item, index) in jobs">
-            <div class="company-info">
-                <div class="logo-container">
-                    <img :src="item.logo" alt="">
+            <div class="top-bar">
+                <div class="company-info">
+                    <div class="logo-container">
+                        <img :src="item.logo" alt="">
+                    </div>
+                    <h1>{{item.company}}</h1>
                 </div>
-                <h1>{{item.company}}</h1>
                 <div v-if="starred.includes(index + 1)" @click="favorite(index)"><i class="fas fa-star"></i></div>
                 <div v-else @click="favorite(index)"><i class="far fa-star"></i></div>
             </div>
-            <div v-if="applied.includes(index + 1)">APPLIED</div>
+            <div class="badge" v-if="applied.includes(index + 1)">APPLIED</div>
 
             <ul class="position-info">
-                <li>Position: {{item.position}}</li>
-                <li>Description: {{item.description}}</li>
-                <li>City: {{item.city}}</li>
-                <li>Contact: {{item.contract}}</li>
+                <li>
+                    <div class="key">Position:</div> {{item.position}}
+                </li>
+                <li>
+                    <div class="key">Description:</div> {{item.description}}
+                </li>
+                <li>
+                    <div class="key">City:</div> {{item.city}}
+                </li>
+                <li>
+                    <div class="key">Contact:</div> {{item.contract}}
+                </li>
             </ul>
-            <div class="data-info">Created at: {{item.created_at}}</div>
+            <div class="data-info">
+                <div class="key">Created at:</div> {{item.created_at}}
+            </div>
             <div v-if="!applied.includes(index + 1)"><button @click="apply(index)">Applied</button></div>
         </div>
 

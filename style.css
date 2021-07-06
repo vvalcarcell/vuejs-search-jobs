@@ -2,6 +2,16 @@
 box-sizing: border-box;
 margin: 0;
 padding: 0;
+font-family: 'Oswald', sans-serif;
+}
+
+ul {
+list-style: none;
+}
+
+.list-item {
+padding: 10px;
+margin: 50px 0;
 }
 
 .logo-container {
@@ -13,19 +23,13 @@ width: 100%;
 }
 
 .applied {
-background-color: goldenrod;
-}
-
-.d-none {
-display: none;
-}
-
-.d-block {
-display: block;
+background-color: greenyellow;
 }
 
 #root {
 position: relative;
+width: 70%;
+margin: 0 auto;
 }
 
 .applicationAdvice {
@@ -34,4 +38,40 @@ top: 50%;
 left: 50%;
 transform: translate(-50%);
 z-index: 1001;
+}
+
+.top-bar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.company-info {
+display: flex;
+align-items: center;
+}
+
+.company-info h1 {
+margin-left: 20px;
+}
+
+.badge {
+border: 2px solid black;
+display: inline-block;
+padding: 3px;
+}
+
+.key {
+display: inline-block;
+font-weight: bold;
+margin-right: 5px;
+}
+
+.position-info, .data-info {
+font-size: 18px;
+}
+
+.data-info {
+display: flex;
+justify-content: flex-end;
 }
