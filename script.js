@@ -57,7 +57,8 @@ new Vue(
                 },
             ],
             starred: [1, 2, 3],
-            applied: [4, 5]
+            applied: [4, 5],
+            applicated: false,
 
         },
         methods: {
@@ -78,6 +79,12 @@ new Vue(
             apply: function (index) {
                 this.applied.push(index + 1);
                 this.starred.splice(index, 1);
+                setTimeout(() => {
+                    this.applicated = true;
+                }, 1000);
+                setTimeout(() => {
+                    this.applicated = false;
+                }, 2000);
             }
 
         }

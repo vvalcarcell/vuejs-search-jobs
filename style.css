@@ -15,3 +15,23 @@ width: 100%;
 .applied {
 background-color: goldenrod;
 }
+
+.d-none {
+display: none;
+}
+
+.d-block {
+display: block;
+}
+
+#root {
+position: relative;
+}
+
+.applicationAdvice {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%);
+z-index: 1001;
+}
