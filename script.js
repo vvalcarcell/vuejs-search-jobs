@@ -67,7 +67,13 @@ new Vue(
                 } else {
                     this.starred.splice(index, 1);
                 }
-
+            },
+            isApplied: function (index) {
+                if (!this.applied.includes(index + 1)) {
+                    return null;
+                } else {
+                    return 'applied';
+                }
             }
 
         }

@@ -17,7 +17,7 @@
 <body>
 
     <div id="root">
-        <div class="list-item" v-for="(item, index) in jobs">
+        <div class="list-item" :class="isApplied(index)" v-for="(item, index) in jobs">
             <div class="company-info">
                 <div class="logo-container">
                     <img :src="item.logo" alt="">
@@ -26,6 +26,7 @@
                 <div v-if="starred.includes(index + 1)" @click="favorite(index)"><i class="fas fa-star"></i></div>
                 <div v-else @click="favorite(index)"><i class="far fa-star"></i></div>
             </div>
+            <div v-if="applied.includes(index + 1)">APPLIED</div>
 
             <ul class="position-info">
                 <li>Position: {{item.position}}</li>
@@ -34,6 +35,7 @@
                 <li>Contact: {{item.contract}}</li>
             </ul>
             <div class="data-info">Created at: {{item.created_at}}</div>
+            <div v-if="!applied.includes(index + 1)"><button @click="applied(index)">Applied</button></div>
 
         </div>
 

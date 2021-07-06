@@ -11,3 +11,7 @@ width: 100px;
 .logo-container > img {
 width: 100%;
 }
+
+.applied {
+background-color: goldenrod;
+}
