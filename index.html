@@ -23,8 +23,8 @@
                     <img :src="item.logo" alt="">
                 </div>
                 <h1>{{item.company}}</h1>
-                <div v-if="starred.includes(index + 1)"><i class="fas fa-star"></i></div>
-                <div v-else><i class="far fa-star"></i></div>
+                <div v-if="starred.includes(index + 1)" @click="favorite(index)"><i class="fas fa-star"></i></div>
+                <div v-else @click="favorite(index)"><i class="far fa-star"></i></div>
             </div>
 
             <ul class="position-info">

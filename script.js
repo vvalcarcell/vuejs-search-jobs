@@ -60,7 +60,17 @@ new Vue(
             applied: [4, 5]
 
         },
-        methods: {}
+        methods: {
+            favorite: function (index) {
+                if (!this.starred.includes(index + 1)) {
+                    this.starred.push(index + 1);
+                } else {
+                    this.starred.splice(index, 1);
+                }
+
+            }
+
+        }
     }
 
 );
