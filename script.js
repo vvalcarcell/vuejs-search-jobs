@@ -74,6 +74,10 @@ new Vue(
                 } else {
                     return 'applied';
                 }
+            },
+            apply: function (index) {
+                this.applied.push(index + 1);
+                this.starred.splice(index, 1);
             }
 
         }

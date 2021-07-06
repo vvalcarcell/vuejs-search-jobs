@@ -35,7 +35,7 @@
                 <li>Contact: {{item.contract}}</li>
             </ul>
             <div class="data-info">Created at: {{item.created_at}}</div>
-            <div v-if="!applied.includes(index + 1)"><button @click="applied(index)">Applied</button></div>
+            <div v-if="!applied.includes(index + 1)"><button @click="apply(index)">Applied</button></div>
 
         </div>
 
