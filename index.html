@@ -20,6 +20,8 @@
 <body>
 
     <div id="root">
+        <h1>Open Positions</h1>
+        <span><i class="fas fa-chevron-down"></i></span>
         <div class="list-item applied" v-for="(item, index) in jobs" v-if="applied.includes(item.id)">
             <div class="top-bar">
                 <div class="company-info">

@@ -58,6 +58,7 @@ new Vue(
             ],
             starred: [2, 3],
             applied: [4],
+            applicated: false,
         },
         methods: {
             favorite: function (itemId) {

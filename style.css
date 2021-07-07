@@ -5,6 +5,27 @@ padding: 0;
 font-family: 'Oswald', sans-serif;
 }
 
+#root {
+position: relative;
+width: 70%;
+margin: 0 auto;
+}
+
+#root > h1 {
+display: inline-block;
+margin-right: 5px;
+margin-top: 20px;
+}
+
+i.fa-chevron-down {
+vertical-align: text-top;
+font-size: 23px;
+}
+
+i {
+cursor: pointer;
+}
+
 ul {
 list-style: none;
 }
@@ -26,22 +47,17 @@ width: 100%;
 background-color: greenyellow;
 }
 
-#root {
-position: relative;
-width: 70%;
-margin: 0 auto;
-}
-
 .applicationAdvice {
 position: fixed;
-top: 50%;
+top: 100px;
 left: 50%;
 transform: translate(-50%);
 z-index: 1001;
 padding: 20px;
 font-size: 30px;
-background-color: greenyellow;
-border: 1px solid black;
+font-weight: bold;
+background-color: lightgray;
+border: 2px solid black;
 }
 
 .top-bar {
