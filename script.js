@@ -56,29 +56,24 @@ new Vue(
                     contract: 'Full Time'
                 },
             ],
-            starred: [1, 2, 3],
-            applied: [4, 5],
-            applicated: false,
-
+            starred: [2, 3],
+            applied: [4],
         },
         methods: {
-            favorite: function (index) {
-                if (!this.starred.includes(index + 1)) {
-                    this.starred.push(index + 1);
+            favorite: function (itemId) {
+                if (!this.starred.includes(itemId)) {
+                    this.starred.push(itemId);
                 } else {
+                    let index = this.starred.indexOf(itemId);
                     this.starred.splice(index, 1);
                 }
             },
-            isApplied: function (index) {
-                if (!this.applied.includes(index + 1)) {
-                    return null;
-                } else {
-                    return 'applied';
+            apply: function (itemId) {
+                this.applied.push(itemId);
+                if (this.starred.includes(itemId)) {
+                    let index = this.starred.indexOf(itemId);
+                    this.starred.splice(index, 1);
                 }
-            },
-            apply: function (index) {
-                this.applied.push(index + 1);
-                this.starred.splice(index, 1);
                 setTimeout(() => {
                     this.applicated = true;
                 }, 1000);

@@ -10,7 +10,7 @@ list-style: none;
 }
 
 .list-item {
-padding: 10px;
+padding: 15px;
 margin: 50px 0;
 }
 
@@ -38,6 +38,10 @@ top: 50%;
 left: 50%;
 transform: translate(-50%);
 z-index: 1001;
+padding: 20px;
+font-size: 30px;
+background-color: greenyellow;
+border: 1px solid black;
 }
 
 .top-bar {
@@ -59,6 +63,7 @@ margin-left: 20px;
 border: 2px solid black;
 display: inline-block;
 padding: 3px;
+margin: 5px 0;
 }
 
 .key {
@@ -74,4 +79,13 @@ font-size: 18px;
 .data-info {
 display: flex;
 justify-content: flex-end;
+}
+
+button {
+width: 80px;
+padding: 5px 0;
+cursor: pointer;
+font-weight: bold;
+background-color: lightgray;
+border-radius: 10px;
 }
